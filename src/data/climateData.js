@@ -20,17 +20,20 @@ export const billionDollarDisasters = [
   {decade:"2020-24",avg:19.0,cost:153.2}
 ]
 export const continentWarming = [
-  {name:"Arctique",warming:3.8,color:"#7dd3fc"},{name:"Europe",warming:2.3,color:"#60a5fa"},
-  {name:"Asie",warming:1.8,color:"#a78bfa"},{name:"Amérique N.",warming:1.7,color:"#f472b6"},
-  {name:"Afrique",warming:1.4,color:"#fb923c"},{name:"Amérique S.",warming:1.2,color:"#34d399"},
-  {name:"Océanie",warming:1.1,color:"#fbbf24"}
+    {name:"Arctique",   warming:3.8, color:"#ef4444"},
+    {name:"Europe",     warming:2.3, color:"#f97316"},
+    {name:"Asie",       warming:1.8, color:"#fb923c"},
+    {name:"Amérique N.",warming:1.7, color:"#fbbf24"},
+    {name:"Afrique",    warming:1.4, color:"#fcd34d"},
+    {name:"Amérique S.",warming:1.2, color:"#fde68a"},
+    {name:"Océanie",    warming:1.1, color:"#fef3c7"}
 ]
 export const scenariosIPCC = [
-  {name:"SSP1-1.9",temp2100:1.4,label:"Très bas",color:"#22d3ee"},
-  {name:"SSP1-2.6",temp2100:1.8,label:"Bas",color:"#34d399"},
-  {name:"SSP2-4.5",temp2100:2.7,label:"Intermédiaire",color:"#fbbf24"},
-  {name:"SSP3-7.0",temp2100:3.6,label:"Élevé",color:"#f97316"},
-  {name:"SSP5-8.5",temp2100:4.4,label:"Très élevé",color:"#ef4444"}
+    {name:"SSP1-1.9",temp2100:1.4,label:"Très bas",     color:"#22c55e"},
+    {name:"SSP1-2.6",temp2100:1.8,label:"Bas",          color:"#84cc16"},
+    {name:"SSP2-4.5",temp2100:2.7,label:"Intermédiaire",color:"#eab308"},
+    {name:"SSP3-7.0",temp2100:3.6,label:"Élevé",        color:"#f97316"},
+    {name:"SSP5-8.5",temp2100:4.4,label:"Très élevé",   color:"#ef4444"}
 ]
 export const tippingPoints = [
   {name:"Glace Arctique\n(été)",threshold:1.5,icon:"❄️"},{name:"Coraux\ntropicaux",threshold:1.5,icon:"🪸"},
@@ -86,9 +89,9 @@ export const gdpVsIdh = [
   {country:"Niger",gdp:560,idh:0.400}
 ]
 export const clustersPays = [
-  {name:"Cluster A — Très développés",color:"#0ea5e9",pays:"Norvège, Suisse, Islande, Danemark",traits:"IDH > 0.94, Gini < 30, Esp. vie > 82 ans"},
-  {name:"Cluster B — Développés",color:"#22c55e",pays:"France, UK, Japon, Corée du Sud",traits:"IDH 0.85-0.94, Gini 28-35, Esp. vie 78-83 ans"},
-  {name:"Cluster C — Émergents",color:"#f59e0b",pays:"Chine, Brésil, Mexique, Turquie",traits:"IDH 0.70-0.85, Gini 35-55, Forte croissance"},
-  {name:"Cluster D — En développement",color:"#f97316",pays:"Inde, Bangladesh, Kenya, Ghana",traits:"IDH 0.55-0.70, Progrès rapides"},
-  {name:"Cluster E — Vulnérables",color:"#ef4444",pays:"Niger, Tchad, Somalie, Soudan du Sud",traits:"IDH < 0.45, Esp. vie < 60 ans"}
+    {name:"Cluster A — Très développés", color:"#38bdf8",pays:"Norvège, Suisse, Islande, Danemark",  traits:"IDH > 0.94, Gini < 30, Esp. vie > 82 ans"},
+    {name:"Cluster B — Développés",      color:"#34d399",pays:"France, UK, Japon, Corée du Sud",     traits:"IDH 0.85-0.94, Gini 28-35, Esp. vie 78-83 ans"},
+    {name:"Cluster C — Émergents",       color:"#fbbf24",pays:"Chine, Brésil, Mexique, Turquie",     traits:"IDH 0.70-0.85, Gini 35-55, Forte croissance"},
+    {name:"Cluster D — En développement",color:"#f97316",pays:"Inde, Bangladesh, Kenya, Ghana",      traits:"IDH 0.55-0.70, Progrès rapides"},
+    {name:"Cluster E — Vulnérables",     color:"#ef4444",pays:"Niger, Tchad, Somalie, Soudan du Sud",traits:"IDH < 0.45, Esp. vie < 60 ans"}
 ]
