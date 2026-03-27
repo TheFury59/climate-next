@@ -6,6 +6,10 @@ import SVGChart from '@/components/SVGChart'
 import BarChart from '@/components/BarChart'
 import { StatCard, SectionTitle, Source, Card } from '@/components/UI'
 
+// Préfixe automatique pour GitHub Pages (lit NEXT_PUBLIC_BASE_PATH)
+const BASE = process.env.NEXT_PUBLIC_BASE_PATH || ''
+const img = (path) => `${BASE}${path}`
+
 // ════════════════════════════════════════
 // PALETTES — une par sujet
 // S1 Climat  → rouges chauds  #ef4444 principal
@@ -25,7 +29,7 @@ function Intro({ onDone }) {
   return (
     <div style={{ minHeight:"100vh",background:"#fff",display:"flex",alignItems:"center",justifyContent:"center",flexDirection:"column" }}>
       <style>{`@keyframes gp{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}} @keyframes sl{0%{transform:translateX(0)}100%{transform:translateX(140px)}}`}</style>
-      <img src="/epsi-logo.png" alt="EPSI" style={{ height:"70px",marginBottom:"32px",animation:"gp 2s ease-in-out infinite" }} />
+      <img src={img("/epsi-logo.png")} alt="EPSI" style={{ height:"70px",marginBottom:"32px",animation:"gp 2s ease-in-out infinite" }} />
       <h1 style={{ color:"#1a1a2e",fontSize:"28px",fontWeight:"900",letterSpacing:"-0.03em",margin:0,textAlign:"center" }}>Atelier datavisualisation Arras 2026</h1>
       <p style={{ color:"#868e96",fontSize:"14px",marginTop:"12px",letterSpacing:"0.1em",textTransform:"uppercase" }}>EPSI Arras — Mastère 2025</p>
       <p style={{ color:"#ced4da",fontSize:"13px",marginTop:"8px" }}>Hodari Bigwi · Téo Debay</p>
@@ -40,7 +44,7 @@ function HomePage({ setTab }) {
   return (
     <div>
       <div style={{ textAlign:"center",padding:"80px 0 48px" }}>
-        <img src="/epsi-logo.png" alt="EPSI" style={{ height:"70px",marginBottom:"32px" }} />
+        <img src={img("/epsi-logo.png")} alt="EPSI" style={{ height:"70px",marginBottom:"32px" }} />
         <h1 style={{ fontSize:"36px",fontWeight:"900",color:"#1a1a2e",letterSpacing:"-0.03em",margin:"0 0 8px" }}>Atelier datavisualisation Arras 2026</h1>
         <h2 style={{ fontSize:"18px",fontWeight:"600",color:"#6c757d",margin:"0 0 24px" }}>Par Didier NAKACHE</h2>
         <div style={{ width:"60px",height:"3px",background:"#ef4444",margin:"0 auto 32px",borderRadius:"2px" }} />
@@ -49,7 +53,7 @@ function HomePage({ setTab }) {
       <Card style={{ maxWidth:"500px",margin:"0 auto 48px",textAlign:"center" }}>
         <h3 style={{ fontSize:"13px",fontWeight:"700",color:"#868e96",letterSpacing:"0.1em",textTransform:"uppercase",margin:"0 0 16px" }}>Réalisé par</h3>
         <div style={{ display:"flex",justifyContent:"center",gap:"40px" }}>
-          {[{name:"Hodari Bigwi",photo:"/photoHodari.jpg"},{name:"Téo Debay",photo:"/photoTeo.jpg"}].map((p,i) => (
+          {[{name:"Hodari Bigwi",photo:img("/photoHodari.jpg")},{name:"Téo Debay",photo:img("/photoTeo.jpg")}].map((p,i) => (
             <div key={i} style={{ textAlign:"center" }}>
               <img src={p.photo} alt={p.name} style={{ width:"80px",height:"80px",borderRadius:"50%",objectFit:"cover",border:"3px solid #e9ecef",margin:"0 auto 10px",display:"block" }} />
               <div style={{ fontSize:"15px",fontWeight:"700",color:"#1a1a2e" }}>{p.name}</div>
@@ -782,7 +786,7 @@ export default function Home() {
   return (
     <div style={{ minHeight:"100vh",background:"#ffffff",color:"#1a1a2e",fontFamily:"'Inter',system-ui,sans-serif" }}>
       <header style={{ padding:"20px 24px",borderBottom:"1px solid #e9ecef",background:"linear-gradient(180deg,rgba(239,68,68,0.03) 0%,transparent 100%)",display:"flex",alignItems:"center",gap:"16px" }}>
-        <img src="/epsi-logo.png" alt="EPSI" style={{ height:"36px",flexShrink:0 }} />
+        <img src={img("/epsi-logo.png")} alt="EPSI" style={{ height:"36px",flexShrink:0 }} />
         <div>
           <h1 style={{ fontSize:"18px",fontWeight:"800",margin:0,letterSpacing:"-0.02em" }}>Atelier datavisualisation Arras 2026</h1>
           <p style={{ fontSize:"11px",color:"#adb5bd",margin:0,fontFamily:"'DM Mono',monospace" }}>Hodari Bigwi · Téo Debay — EPSI Arras 2025</p>
